@@ -8,7 +8,10 @@
     "start": "ng serve",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "deploy": "run-s deploy:build deploy:deploy-to-github-pages",
+    "deploy:build": "ng build --prod",
+    "deploy:deploy-to-github-pages": "ngh --dir=dist --branch=master"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +42,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
     "protractor": "~4.0.13",
+    "run-all": "^1.0.1",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
     "typescript": "~2.0.3"

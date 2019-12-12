@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { EntityViewAboutContainerComponent } from './containers/entity-view-about-container/entity-view-about-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EntityViewAboutContainerComponent
   ],
   imports: [
     BrowserModule,
