@@ -1,0 +1,16 @@
+<div class="in-root">
+
+  <div class="in-file-tree-container">
+    <app-file-tree
+      [nodes]="nodes"
+      (nodeCheckedChanged)="onNodeCheckedChanged($event)">
+    </app-file-tree>
+  </div>
+
+  <div class="in-file-viewer-container">
+    <pre>
+      {{ curFileNode && curFileNode.content }}
+    </pre>
+  </div>
+
+</div>

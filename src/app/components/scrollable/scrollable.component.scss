@@ -1,0 +1,26 @@
+:host ::ng-deep .scrollbar-track {
+  &.scrollbar-track-x,
+  &.scrollbar-track-y {
+    background-color: transparent;
+  }
+}
+
+.in-scrollable {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+
+  $scrollbarPadding: 10px;
+
+  td.in-padding-right-cell {
+    width: $scrollbarPadding;
+    min-width: $scrollbarPadding;
+    max-width: $scrollbarPadding;
+  }
+
+  td.in-padding-bottom-cell {
+    height: $scrollbarPadding;
+    min-height: $scrollbarPadding;
+    max-height: $scrollbarPadding;
+  }
+}

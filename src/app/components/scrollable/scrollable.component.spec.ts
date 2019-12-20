@@ -1,0 +1,28 @@
+/* tslint:disable:no-unused-variable */
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
+
+import { ScrollableComponent } from './scrollable.component';
+
+describe('ScrollableComponent', () => {
+  let component: ScrollableComponent;
+  let fixture: ComponentFixture<ScrollableComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ ScrollableComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ScrollableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

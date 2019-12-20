@@ -1,0 +1,56 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+$small-view-up-threshold: md;
+$large-view-down-threshold: lg;
+
+.in-root {
+
+  position: relative;
+
+  .in-file-tree-container {
+    position: absolute;
+  }
+  .in-file-viewer-container {
+    position: absolute;
+  }
+
+  @include media-breakpoint-down($small-view-up-threshold) {
+    height: 400px;
+
+    $file-tree-height: 150px;
+
+    .in-file-tree-container {
+      left: 0;
+      right: 0;
+      top: 0;
+      height: $file-tree-height;
+    }
+    .in-file-viewer-container {
+      left: 0;
+      right: 0;
+      top: $file-tree-height;
+      bottom: 0;
+    }
+  }
+  @include media-breakpoint-up($large-view-down-threshold) {
+    height: 500px;
+
+    $file-tree-width: 300px;
+
+    .in-file-tree-container {
+      left: 0;
+      width: $file-tree-width;
+      top: 0;
+      bottom: 0;
+    }
+    .in-file-viewer-container {
+      left: $file-tree-width;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+}

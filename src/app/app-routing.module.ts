@@ -9,10 +9,6 @@ const routes: Routes = [
     component: EntityViewAboutContainerComponent,
   },
   {
-    path: 'test',
-    component: EntityViewAboutContainerComponent,
-  },
-  {
     path: '**',
     redirectTo: '',
   },
